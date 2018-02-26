@@ -39,7 +39,7 @@ hbs.registerHelper('screamer', (text) => {
 app.get('/', (req, res) => {
     res.render('home', {
         pageTitle: 'Home Page',
-        welcomeMessage: "Yo Bics, What's Good" 
+        welcomeMessage: "Hello!!!!!!" 
     });
 });
 
