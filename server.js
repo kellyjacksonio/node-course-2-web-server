@@ -3,6 +3,7 @@ const   express = require('express'),
         colors  = require('colors'),
         fs      = require('fs');
 
+const port = process.env.PORT || 3000; // so it can run on heroku
 var app = express();
 
 hbs.registerPartials(__dirname + '/views/partials');
@@ -55,6 +56,8 @@ app.get('/bad', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log('server listening!!!!!!!!!!!!!!!!!!!!!!!!'.rainbow);
+
+
+app.listen(port, () => {
+    console.log(`server listening on port ${port}!!!!!!!!!!!!!!!!!!!!!!!!`.rainbow);
 });
